@@ -1,13 +1,16 @@
 import React from 'react';
-import { View, StyleSheet, Pressable, Platform } from 'react-native';
+import { StyleSheet, Pressable } from 'react-native';
 import { Text } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import Animated, { useAnimatedStyle, withTiming } from 'react-native-reanimated';
 
 interface ReaderControlsProps {
   isPlaying: boolean;
   isLoaded: boolean;
   currentTime: number;
   duration: number;
+  visible: boolean;
   onPlay: () => void;
   onPause: () => void;
   onSeek: (timeMs: number) => void;
@@ -29,13 +32,26 @@ export function ReaderControls({
   isLoaded,
   currentTime,
   duration,
+  visible,
   onPlay,
   onPause,
   onSeek,
   onSkipForward,
   onSkipBackward,
 }: ReaderControlsProps) {
+  const insets = useSafeAreaInsets();
   const progress = duration > 0 ? currentTime / duration : 0;
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          translateY: withTiming(visible ? 0 : 150, { duration: 300 }),
+        },
+      ],
+      opacity: withTiming(visible ? 1 : 0, { duration: 300 }),
+    };
+  });
 
   const handleProgressPress = (event: any) => {
     const { locationX } = event.nativeEvent;
@@ -45,24 +61,24 @@ export function ReaderControls({
   };
 
   return (
-    <View style={styles.container}>
+    <Animated.View style={[styles.container, { paddingBottom: Math.max(insets.bottom, 16) + 8 }, animatedStyle]}>
       {/* Progress bar */}
       <Pressable style={styles.progressContainer} onPress={handleProgressPress}>
-        <View style={styles.progressTrack}>
-          <View
+        <Animated.View style={styles.progressTrack}>
+          <Animated.View
             style={[
               styles.progressFill,
               { width: `${progress * 100}%` },
             ]}
           />
-        </View>
+        </Animated.View>
       </Pressable>
 
       {/* Time and controls */}
-      <View style={styles.controlsRow}>
+      <Animated.View style={styles.controlsRow}>
         <Text style={styles.time}>{formatTime(currentTime)}</Text>
 
-        <View style={styles.buttonsContainer}>
+        <Animated.View style={styles.buttonsContainer}>
           {/* Skip backward */}
           <Pressable
             style={styles.skipButton}
@@ -93,11 +109,11 @@ export function ReaderControls({
           >
             <MaterialIcons name="forward-10" size={28} color="#ECEDEE" />
           </Pressable>
-        </View>
+        </Animated.View>
 
         <Text style={styles.time}>{formatTime(duration)}</Text>
-      </View>
-    </View>
+      </Animated.View>
+    </Animated.View>
   );
 }
 
@@ -110,7 +126,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#1a1d1e',
     paddingHorizontal: 20,
     paddingTop: 16,
-    paddingBottom: Platform.OS === 'ios' ? 40 : 20,
     borderTopWidth: 1,
     borderTopColor: 'rgba(255,255,255,0.1)',
   },

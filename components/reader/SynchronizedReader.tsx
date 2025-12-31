@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
-import { ScrollView, StyleSheet, View, ActivityIndicator, LayoutChangeEvent, Pressable } from 'react-native';
+import { StyleSheet, View, ActivityIndicator, LayoutChangeEvent, Pressable } from 'react-native';
 import { Text } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useAudioSync } from './useAudioSync';
@@ -8,11 +8,14 @@ import { ReaderParagraph } from './ReaderParagraph';
 import { ReaderControls } from './ReaderControls';
 import { BackgroundMusicSettings } from './BackgroundMusicSettings';
 import type { ReadingData } from './types';
+import Animated, { useAnimatedRef, useAnimatedScrollHandler, useSharedValue, runOnJS } from 'react-native-reanimated';
 
 interface SynchronizedReaderProps {
   readingData: ReadingData;
   audioSource: number | { uri: string };
 }
+
+const CONTROLS_HIDE_DELAY = 3000; // Hide controls after 3 seconds of inactivity
 
 export function SynchronizedReader({
   readingData,
@@ -33,11 +36,75 @@ export function SynchronizedReader({
 
   const backgroundMusic = useBackgroundMusic();
   const [showMusicSettings, setShowMusicSettings] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(true);
 
-  const scrollViewRef = useRef<ScrollView>(null);
+  const scrollViewRef = useAnimatedRef<Animated.ScrollView>();
   const sentencePositions = useRef<Map<string, number>>(new Map());
   const lastScrolledSentence = useRef<string | null>(null);
   const scrollViewHeight = useRef<number>(0);
+  const hideControlsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isScrolling = useSharedValue(false);
+  const lastScrollY = useSharedValue(0);
+
+  // Reset hide timer
+  const resetHideTimer = useCallback(() => {
+    if (hideControlsTimer.current) {
+      clearTimeout(hideControlsTimer.current);
+    }
+    hideControlsTimer.current = setTimeout(() => {
+      setControlsVisible(false);
+    }, CONTROLS_HIDE_DELAY);
+  }, []);
+
+  // Show controls and reset timer
+  const showControls = useCallback(() => {
+    setControlsVisible(true);
+    resetHideTimer();
+  }, [resetHideTimer]);
+
+  // Hide controls immediately
+  const hideControls = useCallback(() => {
+    if (hideControlsTimer.current) {
+      clearTimeout(hideControlsTimer.current);
+    }
+    setControlsVisible(false);
+  }, []);
+
+  // Handle scroll events
+  const scrollHandler = useAnimatedScrollHandler({
+    onBeginDrag: () => {
+      isScrolling.value = true;
+      runOnJS(hideControls)();
+    },
+    onEndDrag: () => {
+      isScrolling.value = false;
+    },
+    onMomentumEnd: () => {
+      isScrolling.value = false;
+    },
+    onScroll: (event) => {
+      lastScrollY.value = event.contentOffset.y;
+    },
+  });
+
+  // Handle tap on content area to toggle controls
+  const handleContentPress = useCallback(() => {
+    if (controlsVisible) {
+      hideControls();
+    } else {
+      showControls();
+    }
+  }, [controlsVisible, hideControls, showControls]);
+
+  // Initial timer setup
+  useEffect(() => {
+    resetHideTimer();
+    return () => {
+      if (hideControlsTimer.current) {
+        clearTimeout(hideControlsTimer.current);
+      }
+    };
+  }, [resetHideTimer]);
 
   // Track sentence positions for auto-scroll
   const handleSentenceLayout = useCallback((paragraphIndex: number, sentenceIndex: number, y: number) => {
@@ -59,7 +126,7 @@ export function SynchronizedReader({
     if (sentenceY !== undefined && scrollViewRef.current) {
       // Scroll to position with some padding from top (center the sentence roughly)
       const scrollTarget = Math.max(0, sentenceY - scrollViewHeight.current / 3);
-      scrollViewRef.current.scrollTo({
+      (scrollViewRef.current as any).scrollTo({
         y: scrollTarget,
         animated: true,
       });
@@ -97,25 +164,29 @@ export function SynchronizedReader({
       )}
 
       {/* Content */}
-      <ScrollView
-        ref={scrollViewRef}
-        style={styles.scrollView}
-        contentContainerStyle={styles.content}
-        showsVerticalScrollIndicator={false}
-        onLayout={handleScrollViewLayout}
-      >
-        {readingData.paragraphs.map((paragraph, idx) => (
-          <ReaderParagraph
-            key={idx}
-            paragraph={paragraph}
-            paragraphIndex={idx}
-            currentPosition={currentPosition}
-            onSentenceLayout={handleSentenceLayout}
-          />
-        ))}
-        {/* Bottom padding for controls */}
-        <View style={styles.bottomSpacer} />
-      </ScrollView>
+      <Pressable style={styles.contentPressable} onPress={handleContentPress}>
+        <Animated.ScrollView
+          ref={scrollViewRef}
+          style={styles.scrollView}
+          contentContainerStyle={styles.content}
+          showsVerticalScrollIndicator={false}
+          onLayout={handleScrollViewLayout}
+          onScroll={scrollHandler}
+          scrollEventThrottle={16}
+        >
+          {readingData.paragraphs.map((paragraph, idx) => (
+            <ReaderParagraph
+              key={idx}
+              paragraph={paragraph}
+              paragraphIndex={idx}
+              currentPosition={currentPosition}
+              onSentenceLayout={handleSentenceLayout}
+            />
+          ))}
+          {/* Bottom padding for controls */}
+          <View style={styles.bottomSpacer} />
+        </Animated.ScrollView>
+      </Pressable>
 
       {/* Controls */}
       <ReaderControls
@@ -123,11 +194,12 @@ export function SynchronizedReader({
         isLoaded={isLoaded}
         currentTime={currentTimeMs}
         duration={duration}
-        onPlay={play}
-        onPause={pause}
-        onSeek={seek}
-        onSkipForward={() => skipForward(10)}
-        onSkipBackward={() => skipBackward(10)}
+        visible={controlsVisible}
+        onPlay={() => { play(); showControls(); }}
+        onPause={() => { pause(); showControls(); }}
+        onSeek={(time) => { seek(time); showControls(); }}
+        onSkipForward={() => { skipForward(10); showControls(); }}
+        onSkipBackward={() => { skipBackward(10); showControls(); }}
       />
 
       {/* Background Music Settings */}
@@ -150,6 +222,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#151718',
+  },
+  contentPressable: {
+    flex: 1,
   },
   header: {
     flexDirection: 'row',
