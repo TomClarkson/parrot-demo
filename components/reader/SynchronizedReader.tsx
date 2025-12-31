@@ -1,9 +1,12 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import { ScrollView, StyleSheet, View, ActivityIndicator, LayoutChangeEvent } from 'react-native';
+import React, { useRef, useEffect, useCallback, useState } from 'react';
+import { ScrollView, StyleSheet, View, ActivityIndicator, LayoutChangeEvent, Pressable } from 'react-native';
 import { Text } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useAudioSync } from './useAudioSync';
+import { useBackgroundMusic } from './useBackgroundMusic';
 import { ReaderParagraph } from './ReaderParagraph';
 import { ReaderControls } from './ReaderControls';
+import { BackgroundMusicSettings } from './BackgroundMusicSettings';
 import type { ReadingData } from './types';
 
 interface SynchronizedReaderProps {
@@ -27,6 +30,9 @@ export function SynchronizedReader({
     skipForward,
     skipBackward,
   } = useAudioSync(readingData, audioSource);
+
+  const backgroundMusic = useBackgroundMusic();
+  const [showMusicSettings, setShowMusicSettings] = useState(false);
 
   const scrollViewRef = useRef<ScrollView>(null);
   const sentencePositions = useRef<Map<string, number>>(new Map());
@@ -66,9 +72,21 @@ export function SynchronizedReader({
 
   return (
     <View style={styles.container}>
-      {/* Title */}
+      {/* Header with title and music button */}
       <View style={styles.header}>
         <Text style={styles.title}>{readingData.title}</Text>
+        <Pressable
+          style={styles.musicButton}
+          onPress={() => setShowMusicSettings(true)}
+          accessibilityRole="button"
+          accessibilityLabel="Background music settings"
+        >
+          <MaterialIcons
+            name={backgroundMusic.isEnabled ? 'music-note' : 'music-off'}
+            size={24}
+            color={backgroundMusic.isEnabled ? '#0d7377' : '#9BA1A6'}
+          />
+        </Pressable>
       </View>
 
       {/* Loading indicator */}
@@ -112,6 +130,19 @@ export function SynchronizedReader({
         onSkipForward={() => skipForward(10)}
         onSkipBackward={() => skipBackward(10)}
       />
+
+      {/* Background Music Settings */}
+      <BackgroundMusicSettings
+        visible={showMusicSettings}
+        onClose={() => setShowMusicSettings(false)}
+        isEnabled={backgroundMusic.isEnabled}
+        volume={backgroundMusic.volume}
+        currentTrackId={backgroundMusic.currentTrackId}
+        availableTracks={backgroundMusic.availableTracks}
+        onToggleEnabled={backgroundMusic.toggle}
+        onSelectTrack={backgroundMusic.selectTrack}
+        onVolumeChange={backgroundMusic.setVolume}
+      />
     </View>
   );
 }
@@ -122,6 +153,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#151718',
   },
   header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     paddingHorizontal: 20,
     paddingTop: 16,
     paddingBottom: 12,
@@ -132,6 +166,11 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '600',
     color: '#ECEDEE',
+    flex: 1,
+  },
+  musicButton: {
+    padding: 8,
+    marginLeft: 12,
   },
   loadingContainer: {
     position: 'absolute',
