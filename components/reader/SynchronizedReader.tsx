@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { ScrollView, StyleSheet, View, ActivityIndicator } from 'react-native';
+import React, { useRef, useEffect, useCallback } from 'react';
+import { ScrollView, StyleSheet, View, ActivityIndicator, LayoutChangeEvent } from 'react-native';
 import { Text } from 'react-native';
 import { useAudioSync } from './useAudioSync';
 import { ReaderParagraph } from './ReaderParagraph';
@@ -29,6 +29,40 @@ export function SynchronizedReader({
   } = useAudioSync(readingData, audioSource);
 
   const scrollViewRef = useRef<ScrollView>(null);
+  const sentencePositions = useRef<Map<string, number>>(new Map());
+  const lastScrolledSentence = useRef<string | null>(null);
+  const scrollViewHeight = useRef<number>(0);
+
+  // Track sentence positions for auto-scroll
+  const handleSentenceLayout = useCallback((paragraphIndex: number, sentenceIndex: number, y: number) => {
+    const key = `${paragraphIndex}-${sentenceIndex}`;
+    sentencePositions.current.set(key, y);
+  }, []);
+
+  // Auto-scroll to current sentence
+  useEffect(() => {
+    if (!currentPosition || !isPlaying) return;
+
+    const key = `${currentPosition.paragraphIndex}-${currentPosition.sentenceIndex}`;
+
+    // Only scroll when sentence changes
+    if (key === lastScrolledSentence.current) return;
+    lastScrolledSentence.current = key;
+
+    const sentenceY = sentencePositions.current.get(key);
+    if (sentenceY !== undefined && scrollViewRef.current) {
+      // Scroll to position with some padding from top (center the sentence roughly)
+      const scrollTarget = Math.max(0, sentenceY - scrollViewHeight.current / 3);
+      scrollViewRef.current.scrollTo({
+        y: scrollTarget,
+        animated: true,
+      });
+    }
+  }, [currentPosition, isPlaying]);
+
+  const handleScrollViewLayout = useCallback((event: LayoutChangeEvent) => {
+    scrollViewHeight.current = event.nativeEvent.layout.height;
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -51,6 +85,7 @@ export function SynchronizedReader({
         style={styles.scrollView}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
+        onLayout={handleScrollViewLayout}
       >
         {readingData.paragraphs.map((paragraph, idx) => (
           <ReaderParagraph
@@ -58,6 +93,7 @@ export function SynchronizedReader({
             paragraph={paragraph}
             paragraphIndex={idx}
             currentPosition={currentPosition}
+            onSentenceLayout={handleSentenceLayout}
           />
         ))}
         {/* Bottom padding for controls */}
