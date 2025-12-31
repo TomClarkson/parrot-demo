@@ -6,7 +6,16 @@ on:
 
 jobs:
   publish:
+    name: Create update
     type: update
     params:
       branch: pr-${{ github.event.pull_request.number }}
       message: "PR #${{ github.event.pull_request.number }}"
+
+  comment:
+    name: Post QR code
+    needs: [publish]
+    type: github-pr-comment
+    params:
+      comment_type: fingerprint
+      fingerprint_diff_source: github-latest-pushed-update
