@@ -43,6 +43,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "4f0ce6f7-108b-44da-b5b0-e246462dd746"
+      }
+    },
+    "owner": "designsight"
   }
 }
