@@ -15,7 +15,4 @@ jobs:
   comment:
     name: Post QR code
     needs: [publish]
-    type: github-pr-comment
-    params:
-      comment_type: fingerprint
-      fingerprint_diff_source: github-latest-pushed-update
+    type: github-comment
