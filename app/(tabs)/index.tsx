@@ -1,96 +1,102 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
+import { StyleSheet, View, Pressable } from 'react-native';
+import { Link } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+
+const STORIES = [
+  {
+    id: 'jack-and-beanstalk',
+    title: 'Jack and the Beanstalk',
+    description: 'A classic tale of magic beans and a giant in the sky',
+    duration: '0:23',
+  },
+  {
+    id: 'tigershark',
+    title: 'Tigershark and the Ink Cloud Caper',
+    description: 'An underwater adventure in Splash Bay',
+    duration: '2:00',
+  },
+];
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
+    <View style={styles.container}>
+      <ThemedView style={styles.header}>
+        <ThemedText type="title">Stories</ThemedText>
+        <ThemedText style={styles.subtitle}>
+          Tap a story to listen with word highlighting
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/reader/jack-and-beanstalk">
-          <ThemedText type="subtitle">Synchronized Reader</ThemedText>
-        </Link>
-        <ThemedText>
-          Try the ElevenLabs-style synchronized reader with word and sentence highlighting.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      <View style={styles.storiesContainer}>
+        {STORIES.map((story) => (
+          <Link key={story.id} href={`/reader/${story.id}`} asChild>
+            <Pressable style={styles.storyCard}>
+              <View style={styles.storyContent}>
+                <ThemedText type="subtitle" style={styles.storyTitle}>
+                  {story.title}
+                </ThemedText>
+                <ThemedText style={styles.storyDescription}>
+                  {story.description}
+                </ThemedText>
+              </View>
+              <View style={styles.storyMeta}>
+                <ThemedText style={styles.duration}>{story.duration}</ThemedText>
+              </View>
+            </Pressable>
+          </Link>
+        ))}
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    backgroundColor: '#151718',
+  },
+  header: {
+    paddingTop: 60,
+    paddingHorizontal: 20,
+    paddingBottom: 20,
+    backgroundColor: '#151718',
+  },
+  subtitle: {
+    color: '#9BA1A6',
+    marginTop: 4,
+  },
+  storiesContainer: {
+    flex: 1,
+    padding: 16,
+    gap: 12,
+  },
+  storyCard: {
+    backgroundColor: '#1E2022',
+    borderRadius: 12,
+    padding: 16,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.1)',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  storyContent: {
+    flex: 1,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  storyTitle: {
+    color: '#ECEDEE',
+    marginBottom: 4,
+  },
+  storyDescription: {
+    color: '#9BA1A6',
+    fontSize: 14,
+  },
+  storyMeta: {
+    marginLeft: 12,
+  },
+  duration: {
+    color: '#0d7377',
+    fontSize: 14,
+    fontWeight: '600',
   },
 });

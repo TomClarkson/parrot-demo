@@ -11,6 +11,10 @@ const READINGS: Record<string, { data: ReadingData; audio: number }> = {
     data: require('@/assets/readings/jack-and-beanstalk.json'),
     audio: require('@/assets/readings/jack-and-beanstalk.mp3'),
   },
+  'tigershark': {
+    data: require('@/assets/readings/tigershark.json'),
+    audio: require('@/assets/readings/tigershark.mp3'),
+  },
 };
 
 export default function ReaderScreen() {
