@@ -1,4 +1,6 @@
+import Constants from 'expo-constants';
 import { Image } from 'expo-image';
+import * as Updates from 'expo-updates';
 import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/ui/collapsible';
@@ -94,6 +96,30 @@ export default function TabTwoScreen() {
           ),
         })}
       </Collapsible>
+      <Collapsible title="App Version">
+        <ThemedView style={styles.versionContainer}>
+          <ThemedText>
+            <ThemedText type="defaultSemiBold">Version: </ThemedText>
+            {Constants.expoConfig?.version ?? 'N/A'}
+          </ThemedText>
+          <ThemedText>
+            <ThemedText type="defaultSemiBold">Platform: </ThemedText>
+            {Platform.OS} ({Platform.Version})
+          </ThemedText>
+          <ThemedText>
+            <ThemedText type="defaultSemiBold">Update ID: </ThemedText>
+            {Updates.updateId ?? 'Development'}
+          </ThemedText>
+          <ThemedText>
+            <ThemedText type="defaultSemiBold">Channel: </ThemedText>
+            {Updates.channel ?? 'N/A'}
+          </ThemedText>
+          <ThemedText>
+            <ThemedText type="defaultSemiBold">Runtime Version: </ThemedText>
+            {Updates.runtimeVersion ?? 'N/A'}
+          </ThemedText>
+        </ThemedView>
+      </Collapsible>
     </ParallaxScrollView>
   );
 }
@@ -108,5 +134,8 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  versionContainer: {
+    gap: 4,
   },
 });
