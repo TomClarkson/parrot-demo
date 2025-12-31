@@ -65,13 +65,11 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+        <Link href="/reader/jack-and-beanstalk">
+          <ThemedText type="subtitle">Synchronized Reader</ThemedText>
+        </Link>
         <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          Try the ElevenLabs-style synchronized reader with word and sentence highlighting.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>

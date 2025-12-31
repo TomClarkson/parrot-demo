@@ -1,0 +1,1027 @@
+{
+  "title": "Jack and the Beanstalk",
+  "totalDuration": 23916,
+  "paragraphs": [
+    {
+      "text": "Jack and the Beanstalk",
+      "startTime": 0,
+      "endTime": 1486,
+      "sentences": [
+        {
+          "text": "Jack and the Beanstalk",
+          "startTime": 0,
+          "endTime": 1486,
+          "words": [
+            {
+              "text": "Jack",
+              "startTime": 0,
+              "endTime": 511
+            },
+            {
+              "text": "and",
+              "startTime": 592,
+              "endTime": 720
+            },
+            {
+              "text": "the",
+              "startTime": 766,
+              "endTime": 836
+            },
+            {
+              "text": "Beanstalk",
+              "startTime": 871,
+              "endTime": 1486
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Once upon a time there lived a poor widow and her son Jack. One day, Jack's mother told him to sell their only cow.",
+      "startTime": 2183,
+      "endTime": 8800,
+      "sentences": [
+        {
+          "text": "Once upon a time there lived a poor widow and her son Jack.",
+          "startTime": 2183,
+          "endTime": 5468,
+          "words": [
+            {
+              "text": "Once",
+              "startTime": 2183,
+              "endTime": 2461
+            },
+            {
+              "text": "upon",
+              "startTime": 2496,
+              "endTime": 2705
+            },
+            {
+              "text": "a",
+              "startTime": 2752,
+              "endTime": 2775
+            },
+            {
+              "text": "time",
+              "startTime": 2833,
+              "endTime": 3100
+            },
+            {
+              "text": "there",
+              "startTime": 3135,
+              "endTime": 3274
+            },
+            {
+              "text": "lived",
+              "startTime": 3309,
+              "endTime": 3483
+            },
+            {
+              "text": "a",
+              "startTime": 3506,
+              "endTime": 3529
+            },
+            {
+              "text": "poor",
+              "startTime": 3576,
+              "endTime": 3808
+            },
+            {
+              "text": "widow",
+              "startTime": 3878,
+              "endTime": 4156
+            },
+            {
+              "text": "and",
+              "startTime": 4249,
+              "endTime": 4400
+            },
+            {
+              "text": "her",
+              "startTime": 4470,
+              "endTime": 4563
+            },
+            {
+              "text": "son",
+              "startTime": 4621,
+              "endTime": 4841
+            },
+            {
+              "text": "Jack.",
+              "startTime": 4934,
+              "endTime": 5468
+            }
+          ]
+        },
+        {
+          "text": "One day, Jack's mother told him to sell their only cow.",
+          "startTime": 5793,
+          "endTime": 8800,
+          "words": [
+            {
+              "text": "One",
+              "startTime": 5793,
+              "endTime": 6014
+            },
+            {
+              "text": "day,",
+              "startTime": 6049,
+              "endTime": 6281
+            },
+            {
+              "text": "Jack's",
+              "startTime": 6327,
+              "endTime": 6629
+            },
+            {
+              "text": "mother",
+              "startTime": 6676,
+              "endTime": 6885
+            },
+            {
+              "text": "told",
+              "startTime": 6943,
+              "endTime": 7152
+            },
+            {
+              "text": "him",
+              "startTime": 7198,
+              "endTime": 7303
+            },
+            {
+              "text": "to",
+              "startTime": 7349,
+              "endTime": 7407
+            },
+            {
+              "text": "sell",
+              "startTime": 7488,
+              "endTime": 7709
+            },
+            {
+              "text": "their",
+              "startTime": 7755,
+              "endTime": 7906
+            },
+            {
+              "text": "only",
+              "startTime": 7964,
+              "endTime": 8231
+            },
+            {
+              "text": "cow.",
+              "startTime": 8290,
+              "endTime": 8800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Jack went to the market and on the way he met a man who wanted to buy his cow. Jack asked what he would give in return for the cow.",
+      "startTime": 9079,
+      "endTime": 16323,
+      "sentences": [
+        {
+          "text": "Jack went to the market and on the way he met a man who wanted to buy his cow.",
+          "startTime": 9079,
+          "endTime": 13073,
+          "words": [
+            {
+              "text": "Jack",
+              "startTime": 9079,
+              "endTime": 9323
+            },
+            {
+              "text": "went",
+              "startTime": 9369,
+              "endTime": 9509
+            },
+            {
+              "text": "to",
+              "startTime": 9543,
+              "endTime": 9590
+            },
+            {
+              "text": "the",
+              "startTime": 9636,
+              "endTime": 9706
+            },
+            {
+              "text": "market",
+              "startTime": 9752,
+              "endTime": 10159
+            },
+            {
+              "text": "and",
+              "startTime": 10217,
+              "endTime": 10368
+            },
+            {
+              "text": "on",
+              "startTime": 10437,
+              "endTime": 10507
+            },
+            {
+              "text": "the",
+              "startTime": 10542,
+              "endTime": 10612
+            },
+            {
+              "text": "way",
+              "startTime": 10658,
+              "endTime": 10913
+            },
+            {
+              "text": "he",
+              "startTime": 11006,
+              "endTime": 11099
+            },
+            {
+              "text": "met",
+              "startTime": 11169,
+              "endTime": 11320
+            },
+            {
+              "text": "a",
+              "startTime": 11355,
+              "endTime": 11378
+            },
+            {
+              "text": "man",
+              "startTime": 11436,
+              "endTime": 11645
+            },
+            {
+              "text": "who",
+              "startTime": 11691,
+              "endTime": 11796
+            },
+            {
+              "text": "wanted",
+              "startTime": 11854,
+              "endTime": 12086
+            },
+            {
+              "text": "to",
+              "startTime": 12109,
+              "endTime": 12156
+            },
+            {
+              "text": "buy",
+              "startTime": 12214,
+              "endTime": 12376
+            },
+            {
+              "text": "his",
+              "startTime": 12434,
+              "endTime": 12527
+            },
+            {
+              "text": "cow.",
+              "startTime": 12585,
+              "endTime": 13073
+            }
+          ]
+        },
+        {
+          "text": "Jack asked what he would give in return for the cow.",
+          "startTime": 13584,
+          "endTime": 16323,
+          "words": [
+            {
+              "text": "Jack",
+              "startTime": 13584,
+              "endTime": 13851
+            },
+            {
+              "text": "asked",
+              "startTime": 13920,
+              "endTime": 14291
+            },
+            {
+              "text": "what",
+              "startTime": 14350,
+              "endTime": 14512
+            },
+            {
+              "text": "he",
+              "startTime": 14570,
+              "endTime": 14628
+            },
+            {
+              "text": "would",
+              "startTime": 14675,
+              "endTime": 14814
+            },
+            {
+              "text": "give",
+              "startTime": 14849,
+              "endTime": 15023
+            },
+            {
+              "text": "in",
+              "startTime": 15058,
+              "endTime": 15104
+            },
+            {
+              "text": "return",
+              "startTime": 15174,
+              "endTime": 15499
+            },
+            {
+              "text": "for",
+              "startTime": 15557,
+              "endTime": 15661
+            },
+            {
+              "text": "the",
+              "startTime": 15696,
+              "endTime": 15766
+            },
+            {
+              "text": "cow.",
+              "startTime": 15812,
+              "endTime": 16323
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "The man answered that he would give Jack some magic beans. Jack took the magic beans and went back home.",
+      "startTime": 17136,
+      "endTime": 23916,
+      "sentences": [
+        {
+          "text": "The man answered that he would give Jack some magic beans.",
+          "startTime": 17136,
+          "endTime": 20282,
+          "words": [
+            {
+              "text": "The",
+              "startTime": 17136,
+              "endTime": 17264
+            },
+            {
+              "text": "man",
+              "startTime": 17322,
+              "endTime": 17519
+            },
+            {
+              "text": "answered",
+              "startTime": 17600,
+              "endTime": 18030
+            },
+            {
+              "text": "that",
+              "startTime": 18065,
+              "endTime": 18169
+            },
+            {
+              "text": "he",
+              "startTime": 18216,
+              "endTime": 18274
+            },
+            {
+              "text": "would",
+              "startTime": 18309,
+              "endTime": 18448
+            },
+            {
+              "text": "give",
+              "startTime": 18483,
+              "endTime": 18634
+            },
+            {
+              "text": "Jack",
+              "startTime": 18680,
+              "endTime": 18959
+            },
+            {
+              "text": "some",
+              "startTime": 19028,
+              "endTime": 19191
+            },
+            {
+              "text": "magic",
+              "startTime": 19237,
+              "endTime": 19551
+            },
+            {
+              "text": "beans.",
+              "startTime": 19609,
+              "endTime": 20282
+            }
+          ]
+        },
+        {
+          "text": "Jack took the magic beans and went back home.",
+          "startTime": 21234,
+          "endTime": 23916,
+          "words": [
+            {
+              "text": "Jack",
+              "startTime": 21234,
+              "endTime": 21490
+            },
+            {
+              "text": "took",
+              "startTime": 21536,
+              "endTime": 21710
+            },
+            {
+              "text": "the",
+              "startTime": 21757,
+              "endTime": 21826
+            },
+            {
+              "text": "magic",
+              "startTime": 21884,
+              "endTime": 22175
+            },
+            {
+              "text": "beans",
+              "startTime": 22233,
+              "endTime": 22604
+            },
+            {
+              "text": "and",
+              "startTime": 22720,
+              "endTime": 22883
+            },
+            {
+              "text": "went",
+              "startTime": 22941,
+              "endTime": 23103
+            },
+            {
+              "text": "back",
+              "startTime": 23150,
+              "endTime": 23324
+            },
+            {
+              "text": "home.",
+              "startTime": 23394,
+              "endTime": 23916
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wordTimeline": [
+    {
+      "startTime": 0,
+      "endTime": 511,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 592,
+      "endTime": 720,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 766,
+      "endTime": 836,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 871,
+      "endTime": 1486,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 2183,
+      "endTime": 2461,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 2496,
+      "endTime": 2705,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 2752,
+      "endTime": 2775,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 2833,
+      "endTime": 3100,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 3135,
+      "endTime": 3274,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 3309,
+      "endTime": 3483,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 3506,
+      "endTime": 3529,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 3576,
+      "endTime": 3808,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 3878,
+      "endTime": 4156,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 4249,
+      "endTime": 4400,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 4470,
+      "endTime": 4563,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 4621,
+      "endTime": 4841,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 4934,
+      "endTime": 5468,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 5793,
+      "endTime": 6014,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 6049,
+      "endTime": 6281,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 6327,
+      "endTime": 6629,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 6676,
+      "endTime": 6885,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 6943,
+      "endTime": 7152,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 7198,
+      "endTime": 7303,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 7349,
+      "endTime": 7407,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 7488,
+      "endTime": 7709,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 7755,
+      "endTime": 7906,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 7964,
+      "endTime": 8231,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 8290,
+      "endTime": 8800,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 9079,
+      "endTime": 9323,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 9369,
+      "endTime": 9509,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 9543,
+      "endTime": 9590,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 9636,
+      "endTime": 9706,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 9752,
+      "endTime": 10159,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 10217,
+      "endTime": 10368,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 10437,
+      "endTime": 10507,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 10542,
+      "endTime": 10612,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 10658,
+      "endTime": 10913,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 11006,
+      "endTime": 11099,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 11169,
+      "endTime": 11320,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 11355,
+      "endTime": 11378,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 11436,
+      "endTime": 11645,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 11691,
+      "endTime": 11796,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 13
+    },
+    {
+      "startTime": 11854,
+      "endTime": 12086,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 14
+    },
+    {
+      "startTime": 12109,
+      "endTime": 12156,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 15
+    },
+    {
+      "startTime": 12214,
+      "endTime": 12376,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 16
+    },
+    {
+      "startTime": 12434,
+      "endTime": 12527,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 17
+    },
+    {
+      "startTime": 12585,
+      "endTime": 13073,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 18
+    },
+    {
+      "startTime": 13584,
+      "endTime": 13851,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 13920,
+      "endTime": 14291,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 14350,
+      "endTime": 14512,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 14570,
+      "endTime": 14628,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 14675,
+      "endTime": 14814,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 14849,
+      "endTime": 15023,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 15058,
+      "endTime": 15104,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 15174,
+      "endTime": 15499,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 15557,
+      "endTime": 15661,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 15696,
+      "endTime": 15766,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 15812,
+      "endTime": 16323,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 17136,
+      "endTime": 17264,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 17322,
+      "endTime": 17519,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 17600,
+      "endTime": 18030,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 18065,
+      "endTime": 18169,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 18216,
+      "endTime": 18274,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 18309,
+      "endTime": 18448,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 18483,
+      "endTime": 18634,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 18680,
+      "endTime": 18959,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 19028,
+      "endTime": 19191,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 19237,
+      "endTime": 19551,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 19609,
+      "endTime": 20282,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 21234,
+      "endTime": 21490,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 21536,
+      "endTime": 21710,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 21757,
+      "endTime": 21826,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 21884,
+      "endTime": 22175,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 22233,
+      "endTime": 22604,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 22720,
+      "endTime": 22883,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 22941,
+      "endTime": 23103,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 23150,
+      "endTime": 23324,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 23394,
+      "endTime": 23916,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    }
+  ],
+  "metadata": {
+    "voiceId": "21m00Tcm4TlvDq8ikWAM",
+    "generatedAt": "2025-12-31T04:36:23.871Z",
+    "wordCount": 78,
+    "sentenceCount": 7
+  }
+}
