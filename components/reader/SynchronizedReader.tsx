@@ -72,9 +72,8 @@ export function SynchronizedReader({
 
   return (
     <View style={styles.container}>
-      {/* Header with title and music button */}
+      {/* Header with music button */}
       <View style={styles.header}>
-        <Text style={styles.title}>{readingData.title}</Text>
         <Pressable
           style={styles.musicButton}
           onPress={() => setShowMusicSettings(true)}
@@ -154,23 +153,14 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255,255,255,0.1)',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#ECEDEE',
-    flex: 1,
+    paddingTop: 8,
+    paddingBottom: 8,
   },
   musicButton: {
     padding: 8,
-    marginLeft: 12,
   },
   loadingContainer: {
     position: 'absolute',
