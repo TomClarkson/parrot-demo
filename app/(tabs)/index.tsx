@@ -16,6 +16,12 @@ const STORIES = [
     description: 'An underwater adventure in Splash Bay',
     duration: '2:00',
   },
+  {
+    id: 'sleepy-bunny',
+    title: 'The Sleepy Bunny',
+    description: 'A cozy bedtime story about a little bunny named Pip',
+    duration: '1:16',
+  },
 ];
 
 export default function HomeScreen() {

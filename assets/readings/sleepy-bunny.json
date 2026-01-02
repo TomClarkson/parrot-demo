@@ -1,0 +1,1763 @@
+{
+  "title": "The Sleepy Bunny",
+  "totalDuration": 76390,
+  "paragraphs": [
+    {
+      "text": "The Sleepy Bunny",
+      "startTime": 0,
+      "endTime": 1490,
+      "sentences": [
+        {
+          "text": "The Sleepy Bunny",
+          "startTime": 0,
+          "endTime": 1490,
+          "words": [
+            {
+              "text": "The",
+              "startTime": 0,
+              "endTime": 410
+            },
+            {
+              "text": "Sleepy",
+              "startTime": 490,
+              "endTime": 960
+            },
+            {
+              "text": "Bunny",
+              "startTime": 1040,
+              "endTime": 1490
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Once upon a time, in a cozy burrow beneath an old oak tree, there lived a little bunny named Pip. Every evening, as the sun painted the sky in shades of orange and pink, Pip would yawn and stretch his fluffy ears.",
+      "startTime": 2470,
+      "endTime": 24190,
+      "sentences": [
+        {
+          "text": "Once upon a time, in a cozy burrow beneath an old oak tree, there lived a little bunny named Pip.",
+          "startTime": 2470,
+          "endTime": 12550,
+          "words": [
+            {
+              "text": "Once",
+              "startTime": 2470,
+              "endTime": 2900
+            },
+            {
+              "text": "upon",
+              "startTime": 2980,
+              "endTime": 3410
+            },
+            {
+              "text": "a",
+              "startTime": 3490,
+              "endTime": 3860
+            },
+            {
+              "text": "time,",
+              "startTime": 3940,
+              "endTime": 4390
+            },
+            {
+              "text": "in",
+              "startTime": 4470,
+              "endTime": 4860
+            },
+            {
+              "text": "a",
+              "startTime": 4940,
+              "endTime": 5310
+            },
+            {
+              "text": "cozy",
+              "startTime": 5390,
+              "endTime": 5820
+            },
+            {
+              "text": "burrow",
+              "startTime": 5900,
+              "endTime": 6370
+            },
+            {
+              "text": "beneath",
+              "startTime": 6450,
+              "endTime": 6940
+            },
+            {
+              "text": "an",
+              "startTime": 7020,
+              "endTime": 7410
+            },
+            {
+              "text": "old",
+              "startTime": 7490,
+              "endTime": 7900
+            },
+            {
+              "text": "oak",
+              "startTime": 7980,
+              "endTime": 8390
+            },
+            {
+              "text": "tree,",
+              "startTime": 8470,
+              "endTime": 8920
+            },
+            {
+              "text": "there",
+              "startTime": 9000,
+              "endTime": 9450
+            },
+            {
+              "text": "lived",
+              "startTime": 9530,
+              "endTime": 9980
+            },
+            {
+              "text": "a",
+              "startTime": 10060,
+              "endTime": 10430
+            },
+            {
+              "text": "little",
+              "startTime": 10510,
+              "endTime": 10980
+            },
+            {
+              "text": "bunny",
+              "startTime": 11060,
+              "endTime": 11510
+            },
+            {
+              "text": "named",
+              "startTime": 11590,
+              "endTime": 12040
+            },
+            {
+              "text": "Pip.",
+              "startTime": 12120,
+              "endTime": 12550
+            }
+          ]
+        },
+        {
+          "text": "Every evening, as the sun painted the sky in shades of orange and pink, Pip would yawn and stretch his fluffy ears.",
+          "startTime": 12930,
+          "endTime": 24190,
+          "words": [
+            {
+              "text": "Every",
+              "startTime": 12930,
+              "endTime": 13380
+            },
+            {
+              "text": "evening,",
+              "startTime": 13460,
+              "endTime": 13970
+            },
+            {
+              "text": "as",
+              "startTime": 14050,
+              "endTime": 14440
+            },
+            {
+              "text": "the",
+              "startTime": 14520,
+              "endTime": 14930
+            },
+            {
+              "text": "sun",
+              "startTime": 15010,
+              "endTime": 15420
+            },
+            {
+              "text": "painted",
+              "startTime": 15500,
+              "endTime": 15990
+            },
+            {
+              "text": "the",
+              "startTime": 16070,
+              "endTime": 16480
+            },
+            {
+              "text": "sky",
+              "startTime": 16560,
+              "endTime": 16970
+            },
+            {
+              "text": "in",
+              "startTime": 17050,
+              "endTime": 17440
+            },
+            {
+              "text": "shades",
+              "startTime": 17520,
+              "endTime": 17990
+            },
+            {
+              "text": "of",
+              "startTime": 18070,
+              "endTime": 18460
+            },
+            {
+              "text": "orange",
+              "startTime": 18540,
+              "endTime": 19010
+            },
+            {
+              "text": "and",
+              "startTime": 19090,
+              "endTime": 19500
+            },
+            {
+              "text": "pink,",
+              "startTime": 19580,
+              "endTime": 20030
+            },
+            {
+              "text": "Pip",
+              "startTime": 20110,
+              "endTime": 20520
+            },
+            {
+              "text": "would",
+              "startTime": 20600,
+              "endTime": 21050
+            },
+            {
+              "text": "yawn",
+              "startTime": 21130,
+              "endTime": 21560
+            },
+            {
+              "text": "and",
+              "startTime": 21640,
+              "endTime": 22050
+            },
+            {
+              "text": "stretch",
+              "startTime": 22130,
+              "endTime": 22620
+            },
+            {
+              "text": "his",
+              "startTime": 22700,
+              "endTime": 23110
+            },
+            {
+              "text": "fluffy",
+              "startTime": 23190,
+              "endTime": 23660
+            },
+            {
+              "text": "ears.",
+              "startTime": 23740,
+              "endTime": 24190
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Tonight, the moon rose big and bright, casting silver light through the window. Pip hopped to his soft bed made of clover and dandelion fluff. He snuggled down deep and closed his eyes.",
+      "startTime": 25170,
+      "endTime": 42940,
+      "sentences": [
+        {
+          "text": "Tonight, the moon rose big and bright, casting silver light through the window.",
+          "startTime": 25170,
+          "endTime": 32020,
+          "words": [
+            {
+              "text": "Tonight,",
+              "startTime": 25170,
+              "endTime": 25680
+            },
+            {
+              "text": "the",
+              "startTime": 25760,
+              "endTime": 26170
+            },
+            {
+              "text": "moon",
+              "startTime": 26250,
+              "endTime": 26680
+            },
+            {
+              "text": "rose",
+              "startTime": 26760,
+              "endTime": 27190
+            },
+            {
+              "text": "big",
+              "startTime": 27270,
+              "endTime": 27680
+            },
+            {
+              "text": "and",
+              "startTime": 27760,
+              "endTime": 28170
+            },
+            {
+              "text": "bright,",
+              "startTime": 28250,
+              "endTime": 28740
+            },
+            {
+              "text": "casting",
+              "startTime": 28820,
+              "endTime": 29310
+            },
+            {
+              "text": "silver",
+              "startTime": 29390,
+              "endTime": 29860
+            },
+            {
+              "text": "light",
+              "startTime": 29940,
+              "endTime": 30390
+            },
+            {
+              "text": "through",
+              "startTime": 30470,
+              "endTime": 30960
+            },
+            {
+              "text": "the",
+              "startTime": 31040,
+              "endTime": 31450
+            },
+            {
+              "text": "window.",
+              "startTime": 31530,
+              "endTime": 32020
+            }
+          ]
+        },
+        {
+          "text": "Pip hopped to his soft bed made of clover and dandelion fluff.",
+          "startTime": 32400,
+          "endTime": 38500,
+          "words": [
+            {
+              "text": "Pip",
+              "startTime": 32400,
+              "endTime": 32810
+            },
+            {
+              "text": "hopped",
+              "startTime": 32890,
+              "endTime": 33360
+            },
+            {
+              "text": "to",
+              "startTime": 33440,
+              "endTime": 33830
+            },
+            {
+              "text": "his",
+              "startTime": 33910,
+              "endTime": 34320
+            },
+            {
+              "text": "soft",
+              "startTime": 34400,
+              "endTime": 34830
+            },
+            {
+              "text": "bed",
+              "startTime": 34910,
+              "endTime": 35320
+            },
+            {
+              "text": "made",
+              "startTime": 35400,
+              "endTime": 35830
+            },
+            {
+              "text": "of",
+              "startTime": 35910,
+              "endTime": 36300
+            },
+            {
+              "text": "clover",
+              "startTime": 36380,
+              "endTime": 36850
+            },
+            {
+              "text": "and",
+              "startTime": 36930,
+              "endTime": 37340
+            },
+            {
+              "text": "dandelion",
+              "startTime": 37420,
+              "endTime": 37950
+            },
+            {
+              "text": "fluff.",
+              "startTime": 38030,
+              "endTime": 38500
+            }
+          ]
+        },
+        {
+          "text": "He snuggled down deep and closed his eyes.",
+          "startTime": 38880,
+          "endTime": 42940,
+          "words": [
+            {
+              "text": "He",
+              "startTime": 38880,
+              "endTime": 39270
+            },
+            {
+              "text": "snuggled",
+              "startTime": 39350,
+              "endTime": 39860
+            },
+            {
+              "text": "down",
+              "startTime": 39940,
+              "endTime": 40370
+            },
+            {
+              "text": "deep",
+              "startTime": 40450,
+              "endTime": 40880
+            },
+            {
+              "text": "and",
+              "startTime": 40960,
+              "endTime": 41370
+            },
+            {
+              "text": "closed",
+              "startTime": 41450,
+              "endTime": 41920
+            },
+            {
+              "text": "his",
+              "startTime": 42000,
+              "endTime": 42410
+            },
+            {
+              "text": "eyes.",
+              "startTime": 42490,
+              "endTime": 42940
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "The gentle breeze whispered through the leaves above, singing a lullaby just for him. One by one, the stars twinkled to life, keeping watch over all the sleeping creatures below.",
+      "startTime": 43920,
+      "endTime": 60020,
+      "sentences": [
+        {
+          "text": "The gentle breeze whispered through the leaves above, singing a lullaby just for him.",
+          "startTime": 43920,
+          "endTime": 51300,
+          "words": [
+            {
+              "text": "The",
+              "startTime": 43920,
+              "endTime": 44330
+            },
+            {
+              "text": "gentle",
+              "startTime": 44410,
+              "endTime": 44880
+            },
+            {
+              "text": "breeze",
+              "startTime": 44960,
+              "endTime": 45430
+            },
+            {
+              "text": "whispered",
+              "startTime": 45510,
+              "endTime": 46040
+            },
+            {
+              "text": "through",
+              "startTime": 46120,
+              "endTime": 46610
+            },
+            {
+              "text": "the",
+              "startTime": 46690,
+              "endTime": 47100
+            },
+            {
+              "text": "leaves",
+              "startTime": 47180,
+              "endTime": 47650
+            },
+            {
+              "text": "above,",
+              "startTime": 47730,
+              "endTime": 48200
+            },
+            {
+              "text": "singing",
+              "startTime": 48280,
+              "endTime": 48770
+            },
+            {
+              "text": "a",
+              "startTime": 48850,
+              "endTime": 49220
+            },
+            {
+              "text": "lullaby",
+              "startTime": 49300,
+              "endTime": 49790
+            },
+            {
+              "text": "just",
+              "startTime": 49870,
+              "endTime": 50300
+            },
+            {
+              "text": "for",
+              "startTime": 50380,
+              "endTime": 50790
+            },
+            {
+              "text": "him.",
+              "startTime": 50870,
+              "endTime": 51300
+            }
+          ]
+        },
+        {
+          "text": "One by one, the stars twinkled to life, keeping watch over all the sleeping creatures below.",
+          "startTime": 51680,
+          "endTime": 60020,
+          "words": [
+            {
+              "text": "One",
+              "startTime": 51680,
+              "endTime": 52090
+            },
+            {
+              "text": "by",
+              "startTime": 52170,
+              "endTime": 52560
+            },
+            {
+              "text": "one,",
+              "startTime": 52640,
+              "endTime": 53070
+            },
+            {
+              "text": "the",
+              "startTime": 53150,
+              "endTime": 53560
+            },
+            {
+              "text": "stars",
+              "startTime": 53640,
+              "endTime": 54090
+            },
+            {
+              "text": "twinkled",
+              "startTime": 54170,
+              "endTime": 54680
+            },
+            {
+              "text": "to",
+              "startTime": 54760,
+              "endTime": 55150
+            },
+            {
+              "text": "life,",
+              "startTime": 55230,
+              "endTime": 55680
+            },
+            {
+              "text": "keeping",
+              "startTime": 55760,
+              "endTime": 56250
+            },
+            {
+              "text": "watch",
+              "startTime": 56330,
+              "endTime": 56780
+            },
+            {
+              "text": "over",
+              "startTime": 56860,
+              "endTime": 57290
+            },
+            {
+              "text": "all",
+              "startTime": 57370,
+              "endTime": 57780
+            },
+            {
+              "text": "the",
+              "startTime": 57860,
+              "endTime": 58270
+            },
+            {
+              "text": "sleeping",
+              "startTime": 58350,
+              "endTime": 58860
+            },
+            {
+              "text": "creatures",
+              "startTime": 58940,
+              "endTime": 59470
+            },
+            {
+              "text": "below.",
+              "startTime": 59550,
+              "endTime": 60020
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Pip smiled and drifted off to dream of meadows full of flowers and warm sunny days. And there, safe in his burrow, the little bunny slept peacefully until morning.",
+      "startTime": 61000,
+      "endTime": 76390,
+      "sentences": [
+        {
+          "text": "Pip smiled and drifted off to dream of meadows full of flowers and warm sunny days.",
+          "startTime": 61000,
+          "endTime": 69160,
+          "words": [
+            {
+              "text": "Pip",
+              "startTime": 61000,
+              "endTime": 61410
+            },
+            {
+              "text": "smiled",
+              "startTime": 61490,
+              "endTime": 61960
+            },
+            {
+              "text": "and",
+              "startTime": 62040,
+              "endTime": 62450
+            },
+            {
+              "text": "drifted",
+              "startTime": 62530,
+              "endTime": 63020
+            },
+            {
+              "text": "off",
+              "startTime": 63100,
+              "endTime": 63510
+            },
+            {
+              "text": "to",
+              "startTime": 63590,
+              "endTime": 63980
+            },
+            {
+              "text": "dream",
+              "startTime": 64060,
+              "endTime": 64510
+            },
+            {
+              "text": "of",
+              "startTime": 64590,
+              "endTime": 64980
+            },
+            {
+              "text": "meadows",
+              "startTime": 65060,
+              "endTime": 65550
+            },
+            {
+              "text": "full",
+              "startTime": 65630,
+              "endTime": 66060
+            },
+            {
+              "text": "of",
+              "startTime": 66140,
+              "endTime": 66530
+            },
+            {
+              "text": "flowers",
+              "startTime": 66610,
+              "endTime": 67100
+            },
+            {
+              "text": "and",
+              "startTime": 67180,
+              "endTime": 67590
+            },
+            {
+              "text": "warm",
+              "startTime": 67670,
+              "endTime": 68100
+            },
+            {
+              "text": "sunny",
+              "startTime": 68180,
+              "endTime": 68630
+            },
+            {
+              "text": "days.",
+              "startTime": 68710,
+              "endTime": 69160
+            }
+          ]
+        },
+        {
+          "text": "And there, safe in his burrow, the little bunny slept peacefully until morning.",
+          "startTime": 69540,
+          "endTime": 76390,
+          "words": [
+            {
+              "text": "And",
+              "startTime": 69540,
+              "endTime": 69950
+            },
+            {
+              "text": "there,",
+              "startTime": 70030,
+              "endTime": 70500
+            },
+            {
+              "text": "safe",
+              "startTime": 70580,
+              "endTime": 71010
+            },
+            {
+              "text": "in",
+              "startTime": 71090,
+              "endTime": 71480
+            },
+            {
+              "text": "his",
+              "startTime": 71560,
+              "endTime": 71970
+            },
+            {
+              "text": "burrow,",
+              "startTime": 72050,
+              "endTime": 72540
+            },
+            {
+              "text": "the",
+              "startTime": 72620,
+              "endTime": 73030
+            },
+            {
+              "text": "little",
+              "startTime": 73110,
+              "endTime": 73580
+            },
+            {
+              "text": "bunny",
+              "startTime": 73660,
+              "endTime": 74110
+            },
+            {
+              "text": "slept",
+              "startTime": 74190,
+              "endTime": 74640
+            },
+            {
+              "text": "peacefully",
+              "startTime": 74720,
+              "endTime": 75270
+            },
+            {
+              "text": "until",
+              "startTime": 75350,
+              "endTime": 75800
+            },
+            {
+              "text": "morning.",
+              "startTime": 75880,
+              "endTime": 76390
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wordTimeline": [
+    {
+      "startTime": 0,
+      "endTime": 410,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 490,
+      "endTime": 960,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 1040,
+      "endTime": 1490,
+      "paragraphIndex": 0,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 2470,
+      "endTime": 2900,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 2980,
+      "endTime": 3410,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 3490,
+      "endTime": 3860,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 3940,
+      "endTime": 4390,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 4470,
+      "endTime": 4860,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 4940,
+      "endTime": 5310,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 5390,
+      "endTime": 5820,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 5900,
+      "endTime": 6370,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 6450,
+      "endTime": 6940,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 7020,
+      "endTime": 7410,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 7490,
+      "endTime": 7900,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 7980,
+      "endTime": 8390,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 8470,
+      "endTime": 8920,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 9000,
+      "endTime": 9450,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 13
+    },
+    {
+      "startTime": 9530,
+      "endTime": 9980,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 14
+    },
+    {
+      "startTime": 10060,
+      "endTime": 10430,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 15
+    },
+    {
+      "startTime": 10510,
+      "endTime": 10980,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 16
+    },
+    {
+      "startTime": 11060,
+      "endTime": 11510,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 17
+    },
+    {
+      "startTime": 11590,
+      "endTime": 12040,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 18
+    },
+    {
+      "startTime": 12120,
+      "endTime": 12550,
+      "paragraphIndex": 1,
+      "sentenceIndex": 0,
+      "wordIndex": 19
+    },
+    {
+      "startTime": 12930,
+      "endTime": 13380,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 13460,
+      "endTime": 13970,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 14050,
+      "endTime": 14440,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 14520,
+      "endTime": 14930,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 15010,
+      "endTime": 15420,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 15500,
+      "endTime": 15990,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 16070,
+      "endTime": 16480,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 16560,
+      "endTime": 16970,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 17050,
+      "endTime": 17440,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 17520,
+      "endTime": 17990,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 18070,
+      "endTime": 18460,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 18540,
+      "endTime": 19010,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 19090,
+      "endTime": 19500,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 19580,
+      "endTime": 20030,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 13
+    },
+    {
+      "startTime": 20110,
+      "endTime": 20520,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 14
+    },
+    {
+      "startTime": 20600,
+      "endTime": 21050,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 15
+    },
+    {
+      "startTime": 21130,
+      "endTime": 21560,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 16
+    },
+    {
+      "startTime": 21640,
+      "endTime": 22050,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 17
+    },
+    {
+      "startTime": 22130,
+      "endTime": 22620,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 18
+    },
+    {
+      "startTime": 22700,
+      "endTime": 23110,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 19
+    },
+    {
+      "startTime": 23190,
+      "endTime": 23660,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 20
+    },
+    {
+      "startTime": 23740,
+      "endTime": 24190,
+      "paragraphIndex": 1,
+      "sentenceIndex": 1,
+      "wordIndex": 21
+    },
+    {
+      "startTime": 25170,
+      "endTime": 25680,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 25760,
+      "endTime": 26170,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 26250,
+      "endTime": 26680,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 26760,
+      "endTime": 27190,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 27270,
+      "endTime": 27680,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 27760,
+      "endTime": 28170,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 28250,
+      "endTime": 28740,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 28820,
+      "endTime": 29310,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 29390,
+      "endTime": 29860,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 29940,
+      "endTime": 30390,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 30470,
+      "endTime": 30960,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 31040,
+      "endTime": 31450,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 31530,
+      "endTime": 32020,
+      "paragraphIndex": 2,
+      "sentenceIndex": 0,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 32400,
+      "endTime": 32810,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 32890,
+      "endTime": 33360,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 33440,
+      "endTime": 33830,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 33910,
+      "endTime": 34320,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 34400,
+      "endTime": 34830,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 34910,
+      "endTime": 35320,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 35400,
+      "endTime": 35830,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 35910,
+      "endTime": 36300,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 36380,
+      "endTime": 36850,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 36930,
+      "endTime": 37340,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 37420,
+      "endTime": 37950,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 38030,
+      "endTime": 38500,
+      "paragraphIndex": 2,
+      "sentenceIndex": 1,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 38880,
+      "endTime": 39270,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 39350,
+      "endTime": 39860,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 39940,
+      "endTime": 40370,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 40450,
+      "endTime": 40880,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 40960,
+      "endTime": 41370,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 41450,
+      "endTime": 41920,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 42000,
+      "endTime": 42410,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 42490,
+      "endTime": 42940,
+      "paragraphIndex": 2,
+      "sentenceIndex": 2,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 43920,
+      "endTime": 44330,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 44410,
+      "endTime": 44880,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 44960,
+      "endTime": 45430,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 45510,
+      "endTime": 46040,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 46120,
+      "endTime": 46610,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 46690,
+      "endTime": 47100,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 47180,
+      "endTime": 47650,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 47730,
+      "endTime": 48200,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 48280,
+      "endTime": 48770,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 48850,
+      "endTime": 49220,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 49300,
+      "endTime": 49790,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 49870,
+      "endTime": 50300,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 50380,
+      "endTime": 50790,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 50870,
+      "endTime": 51300,
+      "paragraphIndex": 3,
+      "sentenceIndex": 0,
+      "wordIndex": 13
+    },
+    {
+      "startTime": 51680,
+      "endTime": 52090,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 52170,
+      "endTime": 52560,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 52640,
+      "endTime": 53070,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 53150,
+      "endTime": 53560,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 53640,
+      "endTime": 54090,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 54170,
+      "endTime": 54680,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 54760,
+      "endTime": 55150,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 55230,
+      "endTime": 55680,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 55760,
+      "endTime": 56250,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 56330,
+      "endTime": 56780,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 56860,
+      "endTime": 57290,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 57370,
+      "endTime": 57780,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 57860,
+      "endTime": 58270,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 58350,
+      "endTime": 58860,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 13
+    },
+    {
+      "startTime": 58940,
+      "endTime": 59470,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 14
+    },
+    {
+      "startTime": 59550,
+      "endTime": 60020,
+      "paragraphIndex": 3,
+      "sentenceIndex": 1,
+      "wordIndex": 15
+    },
+    {
+      "startTime": 61000,
+      "endTime": 61410,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 61490,
+      "endTime": 61960,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 62040,
+      "endTime": 62450,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 62530,
+      "endTime": 63020,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 63100,
+      "endTime": 63510,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 63590,
+      "endTime": 63980,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 64060,
+      "endTime": 64510,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 64590,
+      "endTime": 64980,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 65060,
+      "endTime": 65550,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 65630,
+      "endTime": 66060,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 66140,
+      "endTime": 66530,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 66610,
+      "endTime": 67100,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 67180,
+      "endTime": 67590,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 12
+    },
+    {
+      "startTime": 67670,
+      "endTime": 68100,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 13
+    },
+    {
+      "startTime": 68180,
+      "endTime": 68630,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 14
+    },
+    {
+      "startTime": 68710,
+      "endTime": 69160,
+      "paragraphIndex": 4,
+      "sentenceIndex": 0,
+      "wordIndex": 15
+    },
+    {
+      "startTime": 69540,
+      "endTime": 69950,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 0
+    },
+    {
+      "startTime": 70030,
+      "endTime": 70500,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 1
+    },
+    {
+      "startTime": 70580,
+      "endTime": 71010,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 2
+    },
+    {
+      "startTime": 71090,
+      "endTime": 71480,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 3
+    },
+    {
+      "startTime": 71560,
+      "endTime": 71970,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 4
+    },
+    {
+      "startTime": 72050,
+      "endTime": 72540,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 5
+    },
+    {
+      "startTime": 72620,
+      "endTime": 73030,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 6
+    },
+    {
+      "startTime": 73110,
+      "endTime": 73580,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 7
+    },
+    {
+      "startTime": 73660,
+      "endTime": 74110,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 8
+    },
+    {
+      "startTime": 74190,
+      "endTime": 74640,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 9
+    },
+    {
+      "startTime": 74720,
+      "endTime": 75270,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 10
+    },
+    {
+      "startTime": 75350,
+      "endTime": 75800,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 11
+    },
+    {
+      "startTime": 75880,
+      "endTime": 76390,
+      "paragraphIndex": 4,
+      "sentenceIndex": 1,
+      "wordIndex": 12
+    }
+  ],
+  "metadata": {
+    "voiceId": "placeholder",
+    "generatedAt": "2026-01-02T07:13:56.785Z",
+    "wordCount": 137,
+    "sentenceCount": 10
+  }
+}

@@ -15,6 +15,10 @@ const READINGS: Record<string, { data: ReadingData; audio: number }> = {
     data: require('@/assets/readings/tigershark.json'),
     audio: require('@/assets/readings/tigershark.mp3'),
   },
+  'sleepy-bunny': {
+    data: require('@/assets/readings/sleepy-bunny.json'),
+    audio: require('@/assets/readings/sleepy-bunny.mp3'),
+  },
 };
 
 export default function ReaderScreen() {
