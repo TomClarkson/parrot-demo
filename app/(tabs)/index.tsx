@@ -27,7 +27,6 @@ export default function HomeScreen() {
           Tap a story to listen with word highlighting
         </ThemedText>
       </ThemedView>
-
       <View style={styles.storiesContainer}>
         {STORIES.map((story) => (
           <Link key={story.id} href={`/reader/${story.id}`} asChild>

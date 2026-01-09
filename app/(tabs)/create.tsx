@@ -76,7 +76,6 @@ export default function CreateScreen() {
               <ThemedText style={styles.buttonText}>Generate Story</ThemedText>
             )}
           </Pressable>
-
           {(text || error) && (
             <Pressable
               style={[styles.button, styles.clearButton]}
