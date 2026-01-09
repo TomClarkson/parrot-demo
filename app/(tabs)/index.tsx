@@ -1,20 +1,20 @@
-import { StyleSheet, View, Pressable } from 'react-native';
-import { Link } from 'expo-router';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { StyleSheet, View, Pressable } from "react-native";
+import { Link } from "expo-router";
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
 
 const STORIES = [
   {
-    id: 'jack-and-beanstalk',
-    title: 'Jack and the Beanstalk',
-    description: 'A classic tale of magic beans and a giant in the sky',
-    duration: '0:23',
+    id: "jack-and-beanstalk",
+    title: "Jack and the Beanstalk",
+    description: "A classic tale of magic beans and a giant in the sky",
+    duration: "0:23",
   },
   {
-    id: 'tigershark',
-    title: 'Tigershark and the Ink Cloud Caper',
-    description: 'An underwater adventure in Splash Bay',
-    duration: '2:00',
+    id: "tigershark",
+    title: "Tigershark and the Ink Cloud Caper",
+    description: "An underwater adventure in Splash Bay",
+    duration: "2:00",
   },
 ];
 
@@ -41,7 +41,9 @@ export default function HomeScreen() {
                 </ThemedText>
               </View>
               <View style={styles.storyMeta}>
-                <ThemedText style={styles.duration}>{story.duration}</ThemedText>
+                <ThemedText style={styles.duration}>
+                  {story.duration}
+                </ThemedText>
               </View>
             </Pressable>
           </Link>
@@ -54,16 +56,16 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#151718',
+    backgroundColor: "#151718",
   },
   header: {
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 20,
-    backgroundColor: '#151718',
+    backgroundColor: "#151718",
   },
   subtitle: {
-    color: '#9BA1A6',
+    color: "#9BA1A6",
     marginTop: 4,
   },
   storiesContainer: {
@@ -72,31 +74,31 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   storyCard: {
-    backgroundColor: '#1E2022',
+    backgroundColor: "#1E2022",
     borderRadius: 12,
     padding: 16,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.1)',
+    borderColor: "rgba(255,255,255,0.1)",
   },
   storyContent: {
     flex: 1,
   },
   storyTitle: {
-    color: '#ECEDEE',
+    color: "#ECEDEE",
     marginBottom: 4,
   },
   storyDescription: {
-    color: '#9BA1A6',
+    color: "#9BA1A6",
     fontSize: 14,
   },
   storyMeta: {
     marginLeft: 12,
   },
   duration: {
-    color: '#0d7377',
+    color: "#0d7377",
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });
