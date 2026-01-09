@@ -1,7 +1,12 @@
-# Parrot Demo - ElevenLabs Synchronized Reader
+# Parrot Stories
 
 ## Overview
-Expo Router project with TypeScript implementing synchronized audio reading with word and sentence highlighting. Works in Expo Go and Expo Web.
+Parrot Stories is a prototype app for learning languages through bilingual stories. Built with Expo Router and TypeScript.
+
+**Key Features:**
+- **Synchronized audio reading** - Word and sentence highlighting synced to audio (pre-generated with ElevenLabs)
+- **AI story generation** - Users can generate their own stories with streaming text
+- **Client-side AI** - Prototyping AI functionality using OpenRouter
 
 ## Package Manager
 **Use bun** for all package management and script running.
@@ -9,14 +14,28 @@ Expo Router project with TypeScript implementing synchronized audio reading with
 - Run scripts: `bun run <script>` or `bun <script>`
 - Expo install: `bunx expo install <package>`
 
+## AI Story Generation
+
+Stories can be generated client-side using OpenRouter:
+
+```typescript
+import { useStoryGeneration } from "@/hooks/useStoryGeneration";
+
+const { text, isGenerating, generate } = useStoryGeneration();
+await generate("A brave knight who befriends a dragon");
+```
+
+**Configuration:**
+- API key: `EXPO_PUBLIC_OPENROUTER_API_KEY` in `.env`
+- Default model: `meta-llama/llama-3.2-3b-instruct:free`
+- Streaming: Uses `expo/fetch` for SSE streaming on mobile
+
 ## Audio Generation Script
 
-Generate audio and timing data from text files:
+Generate synchronized audio and timing data from text files:
 
 ```bash
 bun run generate-audio <input.txt>
-# or directly:
-bun scripts/generate-audio.ts story.txt
 ```
 
 **Outputs to `assets/readings/`:**
@@ -31,8 +50,11 @@ bun scripts/generate-audio.ts story.txt
 
 ```
 app/                    # Expo Router screens
-  (tabs)/              # Tab navigation
-  reader/[id].tsx      # Reader screen (dynamic route)
+  (tabs)/
+    index.tsx          # Home - story list
+    create.tsx         # AI story generation
+    explore.tsx        # App info
+  reader/[id].tsx      # Synchronized reader (dynamic route)
 components/
   reader/              # Synchronized reader components
     SynchronizedReader.tsx
@@ -40,12 +62,12 @@ components/
     ReaderWord.tsx
     ReaderControls.tsx
     useAudioSync.ts
-hooks/                 # Custom React hooks
+hooks/
+  useStoryGeneration.ts  # OpenRouter streaming hook
 constants/             # Theme colors and constants
 scripts/
   generate-audio.ts    # Audio generation script
   lib/
-    types.ts           # Shared TypeScript types
     elevenlabs-client.ts
     timestamp-processor.ts
 assets/
