@@ -1,20 +1,48 @@
-import Constants from 'expo-constants';
-import { Image } from 'expo-image';
-import * as Updates from 'expo-updates';
-import { Platform, StyleSheet } from 'react-native';
+import Constants from "expo-constants";
+import * as Updates from "expo-updates";
+import { Platform, StyleSheet, View, Pressable, Alert } from "react-native";
 
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Fonts } from '@/constants/theme';
+import { Collapsible } from "@/components/ui/collapsible";
+import ParallaxScrollView from "@/components/parallax-scroll-view";
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
+import { IconSymbol } from "@/components/ui/icon-symbol";
+import { Fonts } from "@/constants/theme";
+import { useStories } from "@/hooks/useStories";
+import { useSettings } from "@/hooks/useSettings";
+import { LanguageSelector } from "@/components/settings/LanguageSelector";
+import { LANGUAGE_CONFIG } from "@/types/settings";
 
-export default function TabTwoScreen() {
+export default function SettingsScreen() {
+  const { stories, resetDatabase } = useStories();
+  const { settings, setTargetLanguage } = useSettings();
+
+  const handleResetDatabase = () => {
+    const storyCount = stories.length;
+    Alert.alert(
+      "Reset Database",
+      storyCount > 0
+        ? `This will delete all ${storyCount} saved ${storyCount === 1 ? "story" : "stories"}. This cannot be undone.`
+        : "The database is already empty.",
+      storyCount > 0
+        ? [
+            { text: "Cancel", style: "cancel" },
+            {
+              text: "Delete All",
+              style: "destructive",
+              onPress: async () => {
+                await resetDatabase();
+                Alert.alert("Done", "All stories have been deleted.");
+              },
+            },
+          ]
+        : [{ text: "OK" }]
+    );
+  };
+
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
       headerImage={
         <IconSymbol
           size={310}
@@ -22,85 +50,60 @@ export default function TabTwoScreen() {
           name="chevron.left.forwardslash.chevron.right"
           style={styles.headerImage}
         />
-      }>
+      }
+    >
       <ThemedView style={styles.titleContainer}>
         <ThemedText
           type="title"
           style={{
             fontFamily: Fonts.rounded,
-          }}>
-          Explore
+          }}
+        >
+          Settings
         </ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
+
+      <Collapsible title="Language Settings" initiallyOpen>
+        <ThemedView style={styles.languageSection}>
+          <ThemedText style={styles.languageDescription}>
+            Select the language you're studying. Stories will be generated with
+            translations in this language.
+          </ThemedText>
+          <ThemedText style={styles.currentLanguage}>
+            Currently learning:{" "}
+            <ThemedText type="defaultSemiBold">
+              {LANGUAGE_CONFIG[settings.targetLanguage].label}
             </ThemedText>
-          ),
-        })}
+          </ThemedText>
+          <LanguageSelector
+            selectedLanguage={settings.targetLanguage}
+            onSelect={setTargetLanguage}
+          />
+        </ThemedView>
       </Collapsible>
+
+      <Collapsible title="Data Management">
+        <ThemedView style={styles.dataSection}>
+          <ThemedText style={styles.dataInfo}>
+            You have {stories.length} saved{" "}
+            {stories.length === 1 ? "story" : "stories"}.
+          </ThemedText>
+          <Pressable
+            style={styles.resetButton}
+            onPress={handleResetDatabase}
+          >
+            <ThemedText style={styles.resetButtonText}>
+              Reset Database
+            </ThemedText>
+          </Pressable>
+        </ThemedView>
+      </Collapsible>
+
       <Collapsible title="App Version">
         <ThemedView style={styles.versionContainer}>
           <ThemedText>
             <ThemedText type="defaultSemiBold">Version: </ThemedText>
-            {Constants.expoConfig?.version ?? 'N/A'}
+            {Constants.expoConfig?.version ?? "N/A"}
           </ThemedText>
           <ThemedText>
             <ThemedText type="defaultSemiBold">Platform: </ThemedText>
@@ -108,15 +111,15 @@ export default function TabTwoScreen() {
           </ThemedText>
           <ThemedText>
             <ThemedText type="defaultSemiBold">Update ID: </ThemedText>
-            {Updates.updateId ?? 'Development'}
+            {Updates.updateId ?? "Development"}
           </ThemedText>
           <ThemedText>
             <ThemedText type="defaultSemiBold">Channel: </ThemedText>
-            {Updates.channel ?? 'N/A'}
+            {Updates.channel ?? "N/A"}
           </ThemedText>
           <ThemedText>
             <ThemedText type="defaultSemiBold">Runtime Version: </ThemedText>
-            {Updates.runtimeVersion ?? 'N/A'}
+            {Updates.runtimeVersion ?? "N/A"}
           </ThemedText>
         </ThemedView>
       </Collapsible>
@@ -126,16 +129,43 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: "#808080",
     bottom: -90,
     left: -35,
-    position: 'absolute',
+    position: "absolute",
   },
   titleContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     gap: 8,
+  },
+  languageSection: {
+    gap: 12,
+  },
+  languageDescription: {
+    color: "#9BA1A6",
+    lineHeight: 20,
+  },
+  currentLanguage: {
+    marginBottom: 4,
   },
   versionContainer: {
     gap: 4,
+  },
+  dataSection: {
+    gap: 12,
+  },
+  dataInfo: {
+    color: "#9BA1A6",
+  },
+  resetButton: {
+    backgroundColor: "#ef4444",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  resetButtonText: {
+    color: "#fff",
+    fontWeight: "600",
   },
 });

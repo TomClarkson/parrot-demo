@@ -8,22 +8,43 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  Alert,
+  Text,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { useStoryGeneration } from "@/hooks/useStoryGeneration";
+import { useBilingualStoryGeneration } from "@/hooks/useBilingualStoryGeneration";
+import { useStories } from "@/hooks/useStories";
+import { useSettings } from "@/hooks/useSettings";
+import { useWordLookup } from "@/hooks/useWordLookup";
+import { BilingualStoryView } from "@/components/bilingual/BilingualStoryView";
+import { WordInfoModal } from "@/components/bilingual/WordInfoModal";
+import { LANGUAGE_CONFIG } from "@/types/settings";
 
 export default function CreateScreen() {
   const [prompt, setPrompt] = useState("");
-  const { text, isGenerating, error, generate, clear } = useStoryGeneration();
+  const [isSaving, setIsSaving] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const { settings } = useSettings();
+  const { content, rawText, isGenerating, error, generate, clear } =
+    useBilingualStoryGeneration(settings.targetLanguage);
+  const { saveStory } = useStories();
+  const { wordInfo, isLoading: isWordLoading, error: wordError, lookup, clear: clearWord } =
+    useWordLookup(settings.targetLanguage);
+
   const scrollViewRef = useRef<ScrollView>(null);
+  const router = useRouter();
+
+  const languageLabel = LANGUAGE_CONFIG[settings.targetLanguage].label;
 
   // Auto-scroll to bottom as text streams in
   useEffect(() => {
-    if (text) {
+    if (rawText || content) {
       scrollViewRef.current?.scrollToEnd({ animated: true });
     }
-  }, [text]);
+  }, [rawText, content]);
 
   const handleGenerate = () => {
     if (prompt.trim() && !isGenerating) {
@@ -31,10 +52,46 @@ export default function CreateScreen() {
     }
   };
 
+  const handleSave = async () => {
+    if (!content || isSaving) return;
+
+    setIsSaving(true);
+    try {
+      // Convert bilingual content to a readable format for storage
+      const storyText = content.paragraphs
+        .map((p) =>
+          p.sentences.map((s) => `${s.english}\n${s.translation}`).join("\n\n")
+        )
+        .join("\n\n");
+
+      const story = await saveStory(prompt, storyText, content.title);
+      Alert.alert("Story Saved!", `"${story.title}" has been saved.`, [
+        { text: "View Library", onPress: () => router.push("/(tabs)") },
+        { text: "Create Another", onPress: handleClear },
+      ]);
+    } catch (err) {
+      Alert.alert("Error", "Failed to save story. Please try again.");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
   const handleClear = () => {
     setPrompt("");
     clear();
   };
+
+  const handleWordTap = (word: string, sentenceContext: string) => {
+    setModalVisible(true);
+    lookup(word, sentenceContext);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+    clearWord();
+  };
+
+  const showSaveButton = content && !isGenerating && !error;
 
   return (
     <KeyboardAvoidingView
@@ -46,7 +103,13 @@ export default function CreateScreen() {
         <ThemedText style={styles.subtitle}>
           Describe your story idea and watch it come to life
         </ThemedText>
+        <View style={styles.languageBadge}>
+          <Text style={styles.languageBadgeText}>
+            Learning: {languageLabel}
+          </Text>
+        </View>
       </ThemedView>
+
       <View style={styles.content}>
         <View style={styles.inputContainer}>
           <TextInput
@@ -60,6 +123,7 @@ export default function CreateScreen() {
             editable={!isGenerating}
           />
         </View>
+
         <View style={styles.buttonRow}>
           <Pressable
             style={[
@@ -76,7 +140,26 @@ export default function CreateScreen() {
               <ThemedText style={styles.buttonText}>Generate Story</ThemedText>
             )}
           </Pressable>
-          {(text || error) && (
+
+          {showSaveButton && (
+            <Pressable
+              style={[
+                styles.button,
+                styles.saveButton,
+                isSaving && styles.buttonDisabled,
+              ]}
+              onPress={handleSave}
+              disabled={isSaving}
+            >
+              {isSaving ? (
+                <ActivityIndicator color="#fff" size="small" />
+              ) : (
+                <ThemedText style={styles.buttonText}>Save</ThemedText>
+              )}
+            </Pressable>
+          )}
+
+          {(content || rawText || error) && (
             <Pressable
               style={[styles.button, styles.clearButton]}
               onPress={handleClear}
@@ -85,26 +168,46 @@ export default function CreateScreen() {
             </Pressable>
           )}
         </View>
+
         {error && (
           <View style={styles.errorContainer}>
             <ThemedText style={styles.errorText}>{error}</ThemedText>
           </View>
         )}
-        {text && (
+
+        {(rawText || content) && (
           <ScrollView
             ref={scrollViewRef}
             style={styles.outputContainer}
             contentContainerStyle={styles.outputContent}
           >
-            <ThemedText style={styles.storyText}>{text}</ThemedText>
-            {isGenerating && (
-              <View style={styles.cursorContainer}>
-                <View style={styles.cursor} />
-              </View>
+            {content ? (
+              <BilingualStoryView
+                content={content}
+                language={settings.targetLanguage}
+                onWordTap={handleWordTap}
+              />
+            ) : (
+              <>
+                <ThemedText style={styles.streamingText}>{rawText}</ThemedText>
+                {isGenerating && (
+                  <View style={styles.cursorContainer}>
+                    <View style={styles.cursor} />
+                  </View>
+                )}
+              </>
             )}
           </ScrollView>
         )}
       </View>
+
+      <WordInfoModal
+        visible={modalVisible}
+        wordInfo={wordInfo}
+        isLoading={isWordLoading}
+        error={wordError}
+        onClose={handleCloseModal}
+      />
     </KeyboardAvoidingView>
   );
 }
@@ -123,6 +226,19 @@ const styles = StyleSheet.create({
   subtitle: {
     color: "#9BA1A6",
     marginTop: 4,
+  },
+  languageBadge: {
+    marginTop: 12,
+    backgroundColor: "rgba(13, 115, 119, 0.2)",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 16,
+    alignSelf: "flex-start",
+  },
+  languageBadgeText: {
+    color: "#0d7377",
+    fontSize: 13,
+    fontWeight: "600",
   },
   content: {
     flex: 1,
@@ -157,6 +273,9 @@ const styles = StyleSheet.create({
   generateButton: {
     flex: 1,
     backgroundColor: "#0d7377",
+  },
+  saveButton: {
+    backgroundColor: "#10b981",
   },
   buttonDisabled: {
     opacity: 0.5,
@@ -195,10 +314,10 @@ const styles = StyleSheet.create({
   outputContent: {
     padding: 16,
   },
-  storyText: {
-    color: "#ECEDEE",
-    fontSize: 16,
-    lineHeight: 26,
+  streamingText: {
+    color: "#9BA1A6",
+    fontSize: 14,
+    fontFamily: Platform.OS === "ios" ? "Menlo" : "monospace",
   },
   cursorContainer: {
     flexDirection: "row",
